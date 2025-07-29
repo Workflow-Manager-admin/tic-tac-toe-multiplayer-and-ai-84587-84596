@@ -1,13 +1,42 @@
 /* CSS Variables for Theme Management */
 :root {
+  --primary: #1976d2;
+  --secondary: #424242;
+  --accent: #ffeb3b;
   /* Light theme colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #282c34;
-  --text-secondary: #61dafb;
+  --bg-primary: #fafcff;
+  --bg-secondary: #f6f8fb;
+  --text-primary: #23262b;
+  --text-secondary: #7e869c;
   --border-color: #e9ecef;
-  --button-bg: #007bff;
-  --button-text: #ffffff;
+  --button-bg: #1976d2;
+  --button-text: #fff;
+}
+/* Custom button for tic-tac-toe actions */
+.ttt-btn {
+  transition: all 0.2s cubic-bezier(0.42,0,0.58,1);
+  box-shadow: 0 2px 8px 0 rgba(40,64,158,0.03);
+}
+.ttt-btn:focus {
+  outline: 2px solid var(--primary);
+}
+
+/* Board and square styling */
+.ttt-square {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s;
+}
+.ttt-square:disabled {
+  background: #f2f2f2;
+  color: #bbb;
+  cursor: default;
+  opacity: 0.64;
+  pointer-events: none;
 }
 
 [data-theme="dark"] {
